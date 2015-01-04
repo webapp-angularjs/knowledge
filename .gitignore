@@ -1,0 +1,20 @@
+# --------------------
+# Bower Files
+# --------------------
+.bower-*/
+bower_components
+
+# --------------------
+# Destination Files
+# --------------------
+dist
+
+# --------------------
+# Sass Cache Files
+# --------------------
+.sass-cache/
+
+# --------------------
+# Node Files
+# --------------------
+node_modules
