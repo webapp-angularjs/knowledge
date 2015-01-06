@@ -1,8 +1,8 @@
 // public/js/app.js
-require('./routes/mainCtrl.js');
-require('./main/mainCtrl.js');
+require('./routes/appRoutes.js');
+require('./modules/main/mainCtrl.js');
 require('./services/lyricsService.js');
-require('./lyrics/lyricsModule.js');
+require('./modules/lyrics/lyricsCtrl.js');
 
 angular.module('knowledgeApp', ['ngRoute', 'ngAnimate', 'appRoutes', 
   'mainModule', 'lyricsModule', 'lyricsService']);

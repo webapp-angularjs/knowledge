@@ -7,12 +7,12 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 
 // configuration ===========================================
-    
+console.log('NODE ENV = ' + process.env.NODE_ENV);    
 // config files
 var db = require('./config/db');
 
 // set our port
-var port = process.env.PORT || 9001; 
+var port = process.env.PORT || 3000; 
 
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
@@ -33,19 +33,17 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/bower_components')); 
-app.use(express.static(__dirname + '/dist')); 
-
-app.use(require('connect-livereload')());
+app.use(express.static(__dirname + '/build')); 
 
 // routes ==================================================
 require('./app/routes')(app); // configure our routes
 
 // start app ===============================================
-// startup our app at http://localhost:8080
 app.listen(port);               
+app.use(require('connect-livereload')());
 
-// shoutout to the user                     
-console.log('Magic happens on port ' + port);
+// // shoutout to the user                     
+// console.log('Magic happens on port ' + port);
 
 // expose app           
 exports = module.exports = app;                         

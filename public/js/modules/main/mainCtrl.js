@@ -2,6 +2,6 @@
 
 angular.module('mainModule', [])
   .controller('mainCtrl', ['$scope', function($scope) {
-    $scope.tagMessage = 'To the moon and back!';
+    $scope.tagMessage = 'Welcome lyrics site!';
     $scope.pageClass = 'page-home';
   }]);
