@@ -1,15 +1,14 @@
 var gulp = require('gulp'),
-    del = require('del'),
-    config = require('../config');
+    del = require('del');
 
 /**
  * Cleanup all files before build/re-build task
  */
 gulp.task('clean', function(cb) {
   del([
-    config.assets.build.css, 
-    config.assets.build.images, 
-    config.assets.build.scripts, 
-    config.assets.build.templates
+    global.config.assets.build.css, 
+    global.config.assets.build.images, 
+    global.config.assets.build.scripts, 
+    global.config.assets.build.templates
   ], cb);
 });

@@ -1,7 +1,77 @@
+@import 'variables';
+
 body {
   background-image: url(./images/bg/body-bg.gif);
 }
 
-.navbar {
-  border-radius: 0;
+.header {
+  /**
+   * Top Header
+   */
+  .top-header {
+    height: 110px;
+    background: #fff;
+    border-top: 5px solid #000;
+    background-image: url(./images/bg/body-bg.gif);
+    .top-description {
+      padding: 26px 26px 26px 34px;
+      .large-description {
+        text-transform: uppercase;
+        font-family: FontAwesome;
+        font-size: 25px;
+        font-weight: 700;
+        color: #000;
+        a {
+          color: #000;
+          text-decoration: none;
+          &:hover {
+            color: #000;
+            text-decoration: none;
+          }
+        }
+      }
+      .small-description {
+        color: #ccc;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 5px;
+        a {
+          color: #ccc;
+          text-decoration: none;
+          &:hover {
+            color: #ccc;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }  
+
+  .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  border-bottom: 4px solid #ccc;
 }
+
+
+.footer {
+  height: 180px;
+  background: $background-black-blend;
+
+  border-top: 4px solid #ccc;
+}
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-inverse {
+  background: $background-black;
+  border-color: $background-black;
+}
+
+@import 'home';

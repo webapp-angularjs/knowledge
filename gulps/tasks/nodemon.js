@@ -1,15 +1,18 @@
 var gulp = require('gulp'),
-    nodemon = require('gulp-nodemon'),
-    config = require('../config');
+    nodemon = require('gulp-nodemon');
 
 gulp.task('nodemon', function(cb) { 
   return nodemon({
     script: 'server.js',
     env: { 
-      'PORT': config.port.proxy,
-      'NODE_ENV': global.isProduction ? config.production.env : config.development.env
+      'PORT': global.config.proxy,
+      'NODE_ENV': global.isProduction ? global.config.production.env : global.config.development.env
     }     
-  }).on('start', function(){
+  })
+  .on('start', function(){
+    console.log('--------------cb-------------------');
+    console.log('start');
+    console.log('-----------------------------------');
     cb();
   });
 });    
