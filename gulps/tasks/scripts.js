@@ -20,9 +20,6 @@ gulp.task('scripts', function() {
     debug: true
   });
 
-  console.log('-----------------------------');
-  console.log(global.isProduction);
-  console.log('-----------------------------');
   var bundle = function() {
     bundleLogger.start();
     return bundler
