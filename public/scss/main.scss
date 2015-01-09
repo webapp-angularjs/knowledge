@@ -5,3 +5,49 @@ body {
 .navbar {
   border-radius: 0;
 }
+
+/**
+ * Top Header
+ */
+.top-header {
+  height: 110px;
+  background: #fff;
+  border-top: 5px solid #000;
+  background-image: url(./images/bg/body-bg.gif);
+  .top-description {
+    padding: 26px 26px 26px 34px;
+    .large-description {
+      text-transform: uppercase;
+      font-family: FontAwesome;
+      font-size: 25px;
+      font-weight: 700;
+      color: #000;
+      a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+    .small-description {
+      color: #ccc;
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 5px;
+      a {
+        color: #ccc;
+        text-decoration: none;
+        &:hover {
+          color: #ccc;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.page {
+  margin-top: 111px;
+}

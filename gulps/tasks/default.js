@@ -3,4 +3,4 @@ var gulp = require('gulp');
 /**
  * Run tasks default for a build
  */
-gulp.task('default', ['watch']);
+gulp.task('default', ['config','watch']);

@@ -3,6 +3,6 @@
 var lyricsCtrl = require('./lyrics-controller');
 var lyricsService = require('./lyrics-service');
 
-angular.module('k4s-app-lyrics', [])
+angular.module('ks-app-lyrics', [])
   .controller('lyricsCtrl', lyricsCtrl)
   .factory('lyricsService', lyricsService);

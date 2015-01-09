@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    config = require('../config'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     source = require('vinyl-source-stream2'),
@@ -15,7 +14,7 @@ gulp.task('scripts', function() {
     cache: {},
     packageCache: {},
     fullPath: true,
-    entries: ['./' + config.assets.source.dir + '/js/app.js'],
+    entries: ['./' + global.config.assets.source.dir + '/js/app.js'],
     extensions: ['.js'],
     debug: true
   });
@@ -27,7 +26,7 @@ gulp.task('scripts', function() {
       .on('error', handleErrors)
       .pipe(source('app.js'))
       .pipe(gulpif(global.isProduction, uglify()))
-      .pipe(gulp.dest(config.assets.build.scripts))
+      .pipe(gulp.dest(global.config.assets.build.scripts))
       .pipe(reload({ stream: true }))
       .on('end', bundleLogger.end);
   };

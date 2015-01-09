@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    config = require('../config'),
     gulpif = require('gulp-if'),
     minifyCSS = require('gulp-minify-css'),
     browserSync = require('browser-sync'),
@@ -7,10 +6,10 @@ var gulp = require('gulp'),
     sass = require('gulp-sass');
 
 gulp.task('scss', function () {
-  return gulp.src(config.assets.source.scss)
+  return gulp.src(global.config.assets.source.scss)
     .pipe(sass())
     .pipe(gulpif(global.isProduction, minifyCSS({keepBreaks:false})))
-    .pipe(gulp.dest(config.assets.build.css))
+    .pipe(gulp.dest(global.config.assets.build.css))
     .pipe(reload({ stream:true }));
 });
 

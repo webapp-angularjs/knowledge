@@ -1,13 +1,17 @@
 'use strict';
 
-var CommonHeaderDirective = function($location, CommonHeaderService) {
+var CommonHeaderDirective = function() {
   return {
     restrict: 'A',
-    replace: false,
-    templateUrl: 'modules/common-header/common-header.html'
-  };
+    scope: {
+      callBack: '&callBack'
+    },
+    templateUrl: 'js/components/common-header/common-header.html',
+    link: function(scope, element, attrs) {
+    }
+  }
 };
 
-CommonHeaderDirective.$inject = ['$location', 'CommonHeaderService'];
+CommonHeaderDirective.$inject = [];
 
 module.exports = CommonHeaderDirective;
