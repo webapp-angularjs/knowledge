@@ -1,0 +1,13 @@
+@import 'variables';
+
+.specs_content {
+  height: 700px;
+  background: $background-black;
+  /*padding-bottom: 5px;*/
+  /*margin: -20px 0 0 0;*/
+  border-bottom: 1px solid $border-color;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0;
+}

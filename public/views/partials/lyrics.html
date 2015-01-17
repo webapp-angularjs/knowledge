@@ -1,7 +1,10 @@
 <!-- public/views/home.html -->
 
-<div class="jumbotron text-center">
-    <h1>Lyrics and Artist</h1>
+<div ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]">
+  <div class="specs_content">
+      <h1>Lyrics and Artist</h1>
+      <h2>{{i}}</h2>
 
-    <p>{{ tagMessage }}</p>
+      <p>{{ tagMessage }}</p>
+  </div>  
 </div>

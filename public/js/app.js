@@ -1,8 +1,12 @@
 // public/js/app.js
-require('./routes/mainCtrl.js');
-require('./main/mainCtrl.js');
-require('./services/lyricsService.js');
-require('./lyrics/lyricsModule.js');
+require('./routes/appRoutes');
+require('./main/main-module');
+require('./lyrics/lyrics-module');
+require('./components/common-header/common-header-module');
+require('./components/common-footer/common-footer-module');
+require('./components/common-container/common-container-module');
+require('./components/constants/constants-module')
 
-angular.module('knowledgeApp', ['ngRoute', 'ngAnimate', 'appRoutes', 
-  'mainModule', 'lyricsModule', 'lyricsService']);
+var modules = ['ngRoute', 'ngAnimate', 'appRoutes', 'ks-app-main', 'ks-app-lyrics', 'ks-app-container', 'ks-app-header', 'ks-app-footer','ks-constants'];
+
+angular.module('knowledgeApp', modules);
