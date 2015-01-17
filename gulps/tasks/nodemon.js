@@ -8,9 +8,11 @@ gulp.task('nodemon', function(cb) {
       'PORT': global.config.proxy,
       'NODE_ENV': global.isProduction ? global.config.production.env : global.config.development.env
     }     
-  }).on('start', function(){
-    if(cb != null){      
-      cb();
-    }
+  })
+  .on('start', function(){
+    console.log('--------------cb-------------------');
+    console.log('start');
+    console.log('-----------------------------------');
+    cb();
   });
 });    

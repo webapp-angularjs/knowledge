@@ -10,7 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css"> <!-- custom main -->
-    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="css/pages.css"> <!-- custom styles -->
 
     <!-- JS -->
     <script src="angular/angular.min.js"></script>
@@ -23,11 +23,13 @@
 </head>
 
 <body ng-app="knowledgeApp">
-  <div class="container">
-    <!-- HEADER -->
-    <div common-header></div>
-    <!-- ANGULAR DYNAMIC CONTENT -->
+  <div common-container>
     <div class="page {{ pageClass }}" ng-view></div>
   </div>
+<!--   <div class="container">
+    <div common-header></div>
+    <div class="page {{ pageClass }}" ng-view></div>
+    <div common-footer></div>
+  </div> -->
 </body>
 </html>

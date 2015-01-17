@@ -1,13 +1,19 @@
-.page {
+.page1 {
   bottom: 1px;
   padding-top: 200px;
-  position: absolute;
   text-align: center;
-  top: 52px;
-  width: 92.35%;
+  
+  &.fixed {
+    top: 52px;
+    margin-top: 111px;
+    position: absolute;
+    width: 92.35%;    
+  }
+
   &.ng-leave {
     z-index: 9999;
   }
+  
   &.ng-enter {
     z-index: 8888;
   }

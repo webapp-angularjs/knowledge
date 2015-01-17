@@ -2,7 +2,7 @@
 
 var lyricsCtrl = function($scope) {
   $scope.tagMessage = 'Nothing beats a pocket protector!';
-  $scope.pageClass = 'page-about';
+  $scope.pageClass = 'page-lyric';
 };
 
 lyricsCtrl.$inject = ['$scope'];
