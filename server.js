@@ -9,7 +9,7 @@ var methodOverride = require('method-override');
 // configuration ===========================================
 console.log('NODE ENV = ' + process.env.NODE_ENV);    
 // config files
-var db = require('./config/db');
+var db = require('./config/env/' + process.env.NODE_ENV + '.js');
 
 // set our port
 var port = process.env.PORT || 3000; 

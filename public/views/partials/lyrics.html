@@ -2,9 +2,12 @@
 
 <div ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]">
   <div class="specs_content">
-      <h1>Lyrics and Artist</h1>
-      <h2>{{i}}</h2>
-
-      <p>{{ tagMessage }}</p>
-  </div>  
+    <div class="specs-container">
+      <div ng-class="{'left-content': i % 2 == 0, 'right-content': i%2 !=0}">      
+        <h1>Lyrics and Artist</h1>
+        <h2>{{i}}</h2>
+        <p>{{ tagMessage }}</p>
+      </div>
+    </div>
+  </div>
 </div>

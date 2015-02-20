@@ -1,13 +1,80 @@
 @import 'variables';
 
+#specs-main {
+  background: url(./images/bg/main-bg.jpg);
+  background-size: cover;
+}
+
 .specs_content {
   height: 700px;
   background: $background-black;
-  /*padding-bottom: 5px;*/
-  /*margin: -20px 0 0 0;*/
   border-bottom: 1px solid $border-color;
   display: block;
   position: relative;
   overflow: hidden;
   padding-bottom: 0;
+  background-size:cover;
+  .specs-container {
+    width: 100%;
+    color: $text-color;
+    .left-content {
+      float: left;
+      width: 50%;
+      padding: 0 0 0 15px;
+      h1 {
+        font-size: 55px;
+        line-height: 50px;
+        &.top-spec {
+          padding: 200px 0 0 80px;
+        }
+      }
+      ul {
+        padding: 0 0 0 135px;
+        list-style: none;
+        li {
+          line-height: 30px;
+          font-size: 20px;
+          list-style: disc;
+        }
+      }
+    }
+    .right-content {
+      float: right;
+      width: 50%;
+      padding: 0 15px 0 0;
+      .content {
+        float: left;
+      }
+    }
+    .center-content {
+      width: 70%;
+      margin: auto;
+      color: $text-color-1;
+      h1 {
+        font-size: 63px;
+        line-height: 40px;
+        &.top-spec {
+          padding: 10px 0 0 80px;
+        }
+        &.second-spec {
+          padding: 0 0 0 150px;
+        }
+      }
+      h2 {
+        padding: 0 0 0 150px;
+        &.top-spec {
+          padding-top: 310px;
+        }
+      }
+      ul {
+        padding: 0 0 0 250px;
+        list-style: none;
+        li {
+          line-height: 30px;
+          font-size: 20px;
+          list-style: disc;
+        }
+      }
+    }
+  }
 }

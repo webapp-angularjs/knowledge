@@ -1,6 +1,9 @@
 'use strict';
 
-var mainCtrl = require('./main-controller');
+require('../components/common-modules/common-module');
 
-angular.module('ks-app-main', [])
+var mainCtrl = require('./main-controller');
+var modules = ['ks-app-module'];
+
+angular.module('ks-app-main', modules)
   .controller('mainCtrl', mainCtrl);
