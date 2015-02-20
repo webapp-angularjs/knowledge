@@ -42,8 +42,21 @@
       float: right;
       width: 50%;
       padding: 0 15px 0 0;
-      .content {
-        float: left;
+      h1 {
+        font-size: 55px;
+        line-height: 50px;
+        &.top-spec {
+          padding: 200px 0 0 80px;
+        }
+      }
+      ul {
+        padding: 0 0 0 135px;
+        list-style: none;
+        li {
+          line-height: 30px;
+          font-size: 20px;
+          list-style: disc;
+        }
       }
     }
     .center-content {
